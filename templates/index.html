@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent - bg QR Code Generator with custome color</title>
+</head>
+<body>
+    <h1>Transparent - bg QR Code Generator with custome color by @anshikkumartiwari</h1>
+    <form method="POST">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" required>
+        <br>
+        <label for="color">Color (hex code):</label>
+        <input type="text" id="color" name="color" value="#000000" required><br>
+        <input type="submit" value="Generate QR Code">
+    </form>
+    {% if image_url %}
+    <h2>Generated QR Code:</h2>
+    <img src="{{ image_url }}" alt="Generated QR Code" style="background-color: transparent;">
+    {% endif %}
+</body>
+</html>
